@@ -29,7 +29,6 @@
         <file src="../win64/bin/postproc-55.dll" target="runtimes/win-x64/native" />
         <file src="../win64/bin/swresample-3.dll" target="runtimes/win-x64/native" />
         <file src="../win64/bin/swscale-5.dll" target="runtimes/win-x64/native" />
-        <file src="../win64/bin/libyuv.dll" target="runtimes/win-x64/native" />
 		
         <file src="../linux64/lib/libavcodec.so.58" target="runtimes/linux-x64/native" />
         <file src="../linux64/lib/libavdevice.so.58" target="runtimes/linux-x64/native" />
