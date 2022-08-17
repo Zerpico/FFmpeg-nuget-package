@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>FFMpeg.runtime</id>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
         <title>FFMpeg native bindings for linux, windows</title>
         <authors>zerpico</authors>
         <icon>icon.png</icon>
         <projectUrl>https://github.com/Zerpico/FFmpeg-nuget-package</projectUrl>         
-        <description>Native library ffmpeg for compress ans decompress</description>       
+        <description>Native library ffmpeg for compress and decompress</description>       
         <releaseNotes></releaseNotes>       
-        <tags>FFMpeg netvideo native codec</tags>
+        <tags>FFMpeg runtime native codec Win Windows Linux lin</tags>
         <repository type="git" url="https://github.com/Zerpico/FFmpeg-nuget-package.git" />      
         <dependencies>
             <group targetFramework="netstandard2.0"></group>
