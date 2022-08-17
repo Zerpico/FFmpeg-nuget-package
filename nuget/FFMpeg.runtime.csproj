@@ -4,5 +4,10 @@
     <NoBuild>true</NoBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <NuspecFile>FFMpeg.runtime.nuspec</NuspecFile>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="True" PackagePath="\" />
+  </ItemGroup>
 </Project>
