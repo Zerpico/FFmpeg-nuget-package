@@ -6,10 +6,12 @@
     <NuspecFile>FFMpeg.runtime.nuspec</NuspecFile>
     <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="icon.png" Pack="True" PackagePath="\" />
-    <None Include="..\LICENSE" Pack="True" PackagePath="\" />
+    <None Include="LICENSE" Pack="True" PackagePath="\" />
+    <None Include="README.md" Pack="True" PackagePath="\" />
   </ItemGroup>
 </Project>

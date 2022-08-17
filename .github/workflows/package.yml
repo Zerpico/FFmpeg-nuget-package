@@ -54,7 +54,7 @@ jobs:
     - name: Pack FFmpeg
       run: |
         echo "Packing FFmpeg"
-        dotnet pack nuget/FFMpeg.runtime.csproj -c Release -o ./publish
+        dotnet pack FFMpeg.runtime.csproj -c Release -o ./publish
     - uses: actions/upload-artifact@v3
       with:
         name: my-artifact
