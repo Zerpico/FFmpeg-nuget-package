@@ -24,23 +24,23 @@
         <file src="README.md" target="README.md" />
         <file src="FFMpeg.runtime.props" target="build/netstandard2.0/FFMpeg.runtime.props" />
 
-        <file src="../win64/bin/avcodec-58.dll" target="runtimes/win-x64/native" />
-        <file src="../win64/bin/avdevice-58.dll" target="runtimes/win-x64/native" />
-        <file src="../win64/bin/avfilter-7.dll" target="runtimes/win-x64/native" />
-        <file src="../win64/bin/avformat-58.dll" target="runtimes/win-x64/native" />
-        <file src="../win64/bin/avutil-56.dll" target="runtimes/win-x64/native" />
-        <file src="../win64/bin/postproc-55.dll" target="runtimes/win-x64/native" />
-        <file src="../win64/bin/swresample-3.dll" target="runtimes/win-x64/native" />
-        <file src="../win64/bin/swscale-5.dll" target="runtimes/win-x64/native" />
+        <file src="win64/bin/avcodec-58.dll" target="runtimes/win-x64/native" />
+        <file src="win64/bin/avdevice-58.dll" target="runtimes/win-x64/native" />
+        <file src="win64/bin/avfilter-7.dll" target="runtimes/win-x64/native" />
+        <file src="win64/bin/avformat-58.dll" target="runtimes/win-x64/native" />
+        <file src="win64/bin/avutil-56.dll" target="runtimes/win-x64/native" />
+        <file src="win64/bin/postproc-55.dll" target="runtimes/win-x64/native" />
+        <file src="win64/bin/swresample-3.dll" target="runtimes/win-x64/native" />
+        <file src="win64/bin/swscale-5.dll" target="runtimes/win-x64/native" />
 		
-        <file src="../linux64/lib/libavcodec.so.58" target="runtimes/linux-x64/native" />
-        <file src="../linux64/lib/libavdevice.so.58" target="runtimes/linux-x64/native" />
-        <file src="../linux64/lib/libavfilter.so.7" target="runtimes/linux-x64/native" />
-        <file src="../linux64/lib/libavformat.so.58" target="runtimes/linux-x64/native" />
-        <file src="../linux64/lib/libavutil.so.56" target="runtimes/linux-x64/native" />
-        <file src="../linux64/lib/libpostproc.so.55" target="runtimes/linux-x64/native" />
-        <file src="../linux64/lib/libswresample.so.3" target="runtimes/linux-x64/native" />
-        <file src="../linux64/lib/libswscale.so.5" target="runtimes/linux-x64/native" />
+        <file src="linux64/lib/libavcodec.so.58" target="runtimes/linux-x64/native" />
+        <file src="linux64/lib/libavdevice.so.58" target="runtimes/linux-x64/native" />
+        <file src="linux64/lib/libavfilter.so.7" target="runtimes/linux-x64/native" />
+        <file src="linux64/lib/libavformat.so.58" target="runtimes/linux-x64/native" />
+        <file src="linux64/lib/libavutil.so.56" target="runtimes/linux-x64/native" />
+        <file src="linux64/lib/libpostproc.so.55" target="runtimes/linux-x64/native" />
+        <file src="linux64/lib/libswresample.so.3" target="runtimes/linux-x64/native" />
+        <file src="linux64/lib/libswscale.so.5" target="runtimes/linux-x64/native" />
     </files>
 
 </package>
