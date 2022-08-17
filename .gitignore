@@ -47,5 +47,7 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
-.vs
-.vscode
+.vs/
+.vscode/
+win64/
+linux64/

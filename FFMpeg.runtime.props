@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Target Name="CopyCustomContent" AfterTargets="AfterBuild" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
+	<Target Name="CopyCustomContent1" AfterTargets="AfterBuild" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
 		<ItemGroup>
 			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\win-x64\*.dll" />
 		</ItemGroup>
 		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(TargetDir)\%(RecursiveDir)" SkipUnchangedFiles="true" />
 	</Target>	
 	
-	<Target Name="CopyCustomContent" AfterTargets="AfterPublish" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
+	<Target Name="CopyCustomContent2" AfterTargets="AfterPublish" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
 		<ItemGroup>
 			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\win-x64\*.dll" />
 		</ItemGroup>
 		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(TargetDir)\%(RecursiveDir)" SkipUnchangedFiles="true" />
 	</Target>	
     
-    <Target Name="CopyCustomContent" AfterTargets="AfterBuild" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
+    <Target Name="CopyCustomContent3" AfterTargets="AfterBuild" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
 		<ItemGroup>
 			<ANTLR Include="../ffmpeg/linux64/*.so*" />
 		</ItemGroup>
 		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(TargetDir)\%(RecursiveDir)" SkipUnchangedFiles="true" />
 	</Target>	
 	
-    <Target Name="CopyCustomContent" AfterTargets="AfterPublish" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
+    <Target Name="CopyCustomContent4" AfterTargets="AfterPublish" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
 		<ItemGroup>
 			<ANTLR Include="../ffmpeg/linux64/*.so*" />
 		</ItemGroup>
