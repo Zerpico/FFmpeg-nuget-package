@@ -1,6 +1,8 @@
 # FFmpeg-nuget-package
-FFmpeg Auto-Builds nuget package<br>
-[FFmpeg package v.1.0.1](https://github.com/Zerpico/FFmpeg-nuget-package/releases/latest)
+FFmpeg Auto-Builds nuget package
+
+- [FFmpeg latest release](https://github.com/Zerpico/FFmpeg-nuget-package/releases/latest)
+- [FFmpeg nuget package](https://www.nuget.org/packages/FFMpeg.runtime)
 
 ## Related links:
 - [FFmpeg homepage](https://ffmpeg.org/)
