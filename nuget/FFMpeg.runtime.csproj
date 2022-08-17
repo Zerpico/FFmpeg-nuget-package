@@ -5,9 +5,11 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <NuspecFile>FFMpeg.runtime.nuspec</NuspecFile>
     <PackageIcon>icon.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="icon.png" Pack="True" PackagePath="\" />
+    <None Include="..\LICENSE" Pack="True" PackagePath="\" />
   </ItemGroup>
 </Project>
