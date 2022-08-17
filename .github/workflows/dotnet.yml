@@ -1,0 +1,33 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Install Depedecies
+      run: |
+        pwd
+        echo ${GITHUB_WORKSPACE}
+        current_path=$(pwd)
+        sudo apt-get update -y 
+        sudo apt-get install -y  --no-install-recommends wget unzip 
+    - name: Download FFmpeg
+      run: |
+        echo "Download ffmpeg-n4.4-linux"
+        wget https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n4.4-latest-linux64-gpl-shared-4.4.tar.xz -O ffmpeg-n4.4-linux64.tar.xz
+        tar xf ffmpeg-n4.4-linux64.tar.xz && rm ffmpeg-n4.4-linux64.tar.xz && mv ffmpeg* linux64
+        echo "Download ffmpeg-n4.4-windows"
+        wget https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n4.4-latest-win64-gpl-shared-4.4.zip -O ffmpeg-n4.4-win64.zip
+        unzip ffmpeg-n4.4-win64.zip && rm ffmpeg-n4.4-win64.zip && mv ffmpeg* linux64    
