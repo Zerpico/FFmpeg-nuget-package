@@ -30,7 +30,7 @@ jobs:
         tar xf ffmpeg-n4.4-linux64.tar.xz && rm ffmpeg-n4.4-linux64.tar.xz && mv ffmpeg* linux64
         echo "Download ffmpeg-n4.4-windows"
         wget https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n4.4-latest-win64-gpl-shared-4.4.zip -q -O ffmpeg-n4.4-win64.zip
-        unzip ffmpeg-n4.4-win64.zip && rm ffmpeg-n4.4-win64.zip && mv ffmpeg* linux64    
+        unzip -q ffmpeg-n4.4-win64.zip && rm ffmpeg-n4.4-win64.zip && mv ffmpeg* win64    
         # Delete extra files
         rm linux64/bin/ffmpeg
         rm linux64/bin/ffplay
