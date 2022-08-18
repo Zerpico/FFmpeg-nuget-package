@@ -16,14 +16,14 @@
     
     <Target Name="CopyBuildLinux" AfterTargets="AfterBuild" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
 		<ItemGroup>
-			<ANTLR Include="../ffmpeg/linux64/*.so*" />
+			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\linux-x64\*.so*" />
 		</ItemGroup>
 		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
 	</Target>	
 	
     <Target Name="CopyPublisLinux" AfterTargets="Publish" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
 		<ItemGroup>
-			<ANTLR Include="../ffmpeg/linux64/*.so*" />
+			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\linux-x64\*.so*" />
 		</ItemGroup>
 		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="true" />
 	</Target>	
