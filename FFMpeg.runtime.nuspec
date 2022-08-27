@@ -6,6 +6,8 @@
         <title>FFMpeg native bindings for linux, windows</title>
         <authors>zerpico</authors>
         <icon>icon.png</icon>
+		<license>LICENSE</license>
+		<Readme>README.md</Readme>
         <projectUrl>https://github.com/Zerpico/FFmpeg-nuget-package</projectUrl>         
         <description>Native library ffmpeg for compress and decompress</description>       
         <releaseNotes></releaseNotes>       
