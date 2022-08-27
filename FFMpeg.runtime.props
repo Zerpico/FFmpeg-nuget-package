@@ -2,29 +2,29 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<Target Name="CopyBuildWindows" AfterTargets="AfterBuild" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
 		<ItemGroup>
-			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\win-x64\*.dll" />
+			<BuildWindows Include="$(MSBuildThisFileDirectory)..\..\builds\win-x64\*.dll" />
 		</ItemGroup>
-		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+		<Copy SourceFiles="@(BuildWindows)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+	</Target>	
+
+	<Target Name="CopyPublishWindows" AfterTargets="Publish" Condition="'$(RuntimeIdentifier)' == 'win-x64'">
+		<ItemGroup>
+			<PublishWindows Include="$(MSBuildThisFileDirectory)..\..\builds\win-x64\*.dll" />
+		</ItemGroup>
+		<Copy SourceFiles="@(PublishWindows)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="true"  />
+	</Target>
+
+	<Target Name="CopyBuildLinux" AfterTargets="AfterBuild" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
+		<ItemGroup>
+			<BuildLinux Include="$(MSBuildThisFileDirectory)..\..\builds\linux-x64\*.so*" />
+		</ItemGroup>
+		<Copy SourceFiles="@(BuildLinux)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
 	</Target>	
 	
-	<Target Name="CopyPublisWindows" AfterTargets="Publish" Condition="'$(RuntimeIdentifier)' == 'win-x64'">
+    <Target Name="CopyPublishLinux" AfterTargets="Publish" Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
 		<ItemGroup>
-			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\win-x64\*.dll" />
+			<PublishLinux Include="$(MSBuildThisFileDirectory)..\..\builds\linux-x64\*.so*" />
 		</ItemGroup>
-		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="true" />
-	</Target>	
-    
-    <Target Name="CopyBuildLinux" AfterTargets="AfterBuild" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
-		<ItemGroup>
-			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\linux-x64\*.so*" />
-		</ItemGroup>
-		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
-	</Target>	
-	
-    <Target Name="CopyPublisLinux" AfterTargets="Publish" Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
-		<ItemGroup>
-			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\linux-x64\*.so*" />
-		</ItemGroup>
-		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="true" />
+		<Copy SourceFiles="@(PublishLinux)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="true"  />
 	</Target>	
 </Project>
