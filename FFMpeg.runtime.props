@@ -7,7 +7,7 @@
 		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
 	</Target>	
 	
-	<Target Name="CopyPublisWindows" AfterTargets="Publish" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
+	<Target Name="CopyPublisWindows" AfterTargets="Publish" Condition="'$(RuntimeIdentifier)' == 'win-x64'">
 		<ItemGroup>
 			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\win-x64\*.dll" />
 		</ItemGroup>
@@ -21,7 +21,7 @@
 		<Copy SourceFiles="@(ANTLR)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
 	</Target>	
 	
-    <Target Name="CopyPublisLinux" AfterTargets="Publish" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
+    <Target Name="CopyPublisLinux" AfterTargets="Publish" Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
 		<ItemGroup>
 			<ANTLR Include="$(MSBuildThisFileDirectory)..\..\builds\linux-x64\*.so*" />
 		</ItemGroup>
