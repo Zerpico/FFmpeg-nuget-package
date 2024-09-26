@@ -2,7 +2,7 @@ name: .NET
 
 on:
   push:
-    branches: [ "master", "v4.4.4", "v5.1.4", "v6.1.1" ]
+    branches: [ "master", "ffmpeg_4.4.4", "ffmpeg_5.1.4", "ffmpeg_6.1.1" ]
   pull_request:
     branches: [ "master" ]
 
