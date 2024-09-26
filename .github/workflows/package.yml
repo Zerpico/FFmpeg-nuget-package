@@ -25,12 +25,12 @@ jobs:
         sudo apt-get install -qq -y --no-install-recommends wget curl git-core patchelf unzip zip gzip tar xz-utils 
     - name: Download FFmpeg
       run: |
-        echo "Download ffmpeg-n4.4-linux"
-        curl -L https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2023-11-30-12-55/ffmpeg-n4.4.4-6-gd5fa6e3a91-linux64-gpl-shared-4.4.tar.xz -o ffmpeg-n4.4-linux64.tar.xz
-        tar xf ./ffmpeg-n4.4-linux64.tar.xz && rm ffmpeg-n4.4-linux64.tar.xz && mv ffmpeg-n4.4* linux64
+        echo "Download ffmpeg-n5.1.4-linux"
+        curl -L https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2023-11-30-12-55/ffmpeg-n5.1.4-linux64-gpl-shared-5.1.tar.xz -o ffmpeg-n5.1.4-linux64.tar.xz
+        tar xf ./ffmpeg-n5.1.4-linux64.tar.xz && rm ffmpeg-n5.1.4-linux64.tar.xz && mv ffmpeg-n5* linux64
         echo "Download ffmpeg-n4.4-windows"
-        curl -L https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2023-11-30-12-55/ffmpeg-n4.4.4-6-gd5fa6e3a91-win64-gpl-shared-4.4.zip -o ffmpeg-n4.4-win64.zip
-        unzip ./ffmpeg-n4.4-win64.zip && rm ffmpeg-n4.4-win64.zip && mv ffmpeg-n4.4* win64
+        curl -L https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2023-11-30-12-55/ffmpeg-n5.1.4-win64-gpl-shared-5.1.zip -o ffmpeg-n5.1.4-win64.zip
+        unzip ./ffmpeg-n5.1.4-win64.zip && rm ffmpeg-n5.1.4-win64.zip && mv ffmpeg-n5* win64
         # Delete extra files
         rm linux64/bin/*
         rm win64/bin/*.exe
@@ -40,7 +40,7 @@ jobs:
         rm win64/doc -R
     - name: Patch FFmpeg
       run: |
-        echo "Patch ffmpeg-n4.4-linux"     
+        echo "Patch ffmpeg-n5.1.4-linux"     
         patchelf --set-rpath '$ORIGIN/.' linux64/lib/libpostproc.so
         patchelf --set-rpath '$ORIGIN/.' linux64/lib/libavdevice.so
         patchelf --set-rpath '$ORIGIN/.' linux64/lib/libavcodec.so
